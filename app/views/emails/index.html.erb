@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AJAXmails</title>
+  </head>
+  <body>
+    <%= link_to "Recevoir un Email", emails_path,  method: :post, class: "btn btn-primary", remote: true %>
+
+    <div class="container row" style="margin-right:auto;margin-left:auto;">
+        <div class="col-6 list-group">
+
+          <li class="list-group-item active">Liste des Emails</li>
+          <p id="email_object">
+          <% @emails.each do |index| %>
+          <%= index.object %> <br>
+          <% end %>
+          </p>
+        </div>
+
+        <div class="col-6 list-group">
+
+          <li class="list-group-item active">Email selectionné</li>
+
+        </div>
+
+    </div>
+  </body>
+</html>

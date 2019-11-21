@@ -24,15 +24,15 @@ Email.destroy_all
     my_task.category = my_category
     my_task.save
   end
-  puts "Category & taks Create"
+  puts "Categories & tasks Create"
 end
 
 5.times do
   Book.create(author: Faker::Book.author, title: Faker::Book.title)
-  puts "book create"
+  puts "books create"
 end
 
 5.times do
   Email.create(object: Faker::Lorem.sentence, body: Faker::Lorem.paragraph)
-  puts "email create"
+  puts "emails create"
 end
