@@ -12,16 +12,21 @@
 
           <li class="list-group-item active">Liste des Emails</li>
           <p id="email_object">
-          <% @emails.each do |index| %>
-          <%= index.object %> <br>
-          <% end %>
+            <% @emails.each do |index| %>
+            <span id="email_<%=index.id%>">
+              <%= link_to index.object, email_path(index), remote: true %>
+            </span>
+            <br>
+            <% end %>
+
           </p>
         </div>
 
         <div class="col-6 list-group">
 
           <li class="list-group-item active">Email selectionné</li>
-
+          <p id="email_show">
+          </p>
         </div>
 
     </div>

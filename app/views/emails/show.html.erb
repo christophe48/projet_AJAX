@@ -11,12 +11,11 @@
 
     <center>
     <div class="card" style="width: 26rem; ">
-      <img src="..." class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title"><%= @email.object %></h5>
         <p class="card-text"><%= @email.body %></p>
-        <a href="#" class="btn btn-outline-primary">Marquer comme non lu</a>
-        <a href="#" class="btn btn-outline-danger">Supprimer</a>
+        <a href="#" class="btn btn-outline-secondary">Marquer comme non lu</a>
+        <%= link_to "Supprimer", email_path(),  method: :delete, data-confirm="êtes vous sur?" class: "btn btn-ouline-danger", remote: true %>
       </div>
     </div>
     </center>

@@ -1,1 +1,1 @@
-<%= @email.object%> <br>
+<span id="email_<%=@email.id()%>"> <%=link_to @email.object, @email, remote: true%> </span> <br>

@@ -1,0 +1,6 @@
+//alert("Appel du doc show.js.erb");
+if (document.getElementById("email_clicked") === null) {
+  document.getElementById("email_show").insertAdjacentHTML("beforeend", "<%= j render 'show_email', email: @email %>");
+} else {
+document.getElementById("email_clicked").remove();
+}
