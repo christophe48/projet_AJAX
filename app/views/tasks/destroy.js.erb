@@ -1,0 +1,7 @@
+alert("passe par JS");
+
+document.getElementById('delete')
+
+$(document).ready(function() {
+  $("#task-"+ <%= @task.id %>).remove();
+});

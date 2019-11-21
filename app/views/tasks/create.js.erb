@@ -1,0 +1,6 @@
+alert("le JS s'est éxécuté");
+
+//document.getElementById("task-list").insertAdjacentHTML("beforeend", "<%= j render 'create_task', task: @task %>")
+
+
+{document.getElementById("<%= @category.title%>").insertAdjacentHTML("beforeend", "<%= j render 'create_task', task: @task %>");}
